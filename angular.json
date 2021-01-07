@@ -24,8 +24,8 @@
               "src/assets"
             ],
             "styles": [
-               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-               "node_modules/font-awesome/css/font-awesome.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/font-awesome/css/font-awesome.css",
               "src/styles.css"
             ],
             "scripts": [
@@ -125,6 +125,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ProvidenceTravels"
+    }
+  },
+  "defaultProject": "ProvidenceTravels",
+  "cli": {
+    "analytics": false
+  }
 }
