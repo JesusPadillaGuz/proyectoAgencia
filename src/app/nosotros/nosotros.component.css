@@ -2,19 +2,47 @@ img{
     border-radius: 50%;
 }
 
+p{
+    font-size: 20px;
+    text-align: left;
+}
+
+ul{
+    font-size: 20px;
+    list-style: none;
+    padding-right: 50px;
+}
+
 
 .bgprimary{
     color: rgb(255, 255, 255);
-    background-image: linear-gradient(to right, #000000, #495355);
+    background-image: linear-gradient(to right, #000000, #495355, #cac4c4);
+}
+
+.bgprimary:hover{
+    background-image: linear-gradient(to left, #000000, #495355, #cac4c4);
 }
 
 .bgsecondary {
-    background-image: url("https://image.freepik.com/vector-gratis/ola-texturas-vector-fondo-blanco_53876-60287.jpg");
+   background-image: url("https://ak2.picdn.net/shutterstock/videos/8515468/thumb/2.jpg");
     background-repeat:no-repeat;
     background-size: cover;
 }
+ .bg3{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.541);
+    border-radius: 20px;
+    padding: 30px;
+}
+
 
 section{
     padding: 4vmax;
+    text-align: center;
+    font-family:serif;
 }
+
+
+
+
 
