@@ -27,7 +27,7 @@ export class UsuariosControlComponent implements OnInit {
   lista;
    constructor(private bd: UserService) { 
     this.bd.getUsers().subscribe(resp => {
-      this.lista = resp['results'];
+      this.lista = resp;
       console.log(this.lista);
     });
   }

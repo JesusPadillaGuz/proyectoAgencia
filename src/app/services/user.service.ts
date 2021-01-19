@@ -7,7 +7,8 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
   providedIn: 'root'
 })
 export class UserService {
-  baseUrl = 'https://localhost:5001/';
+  baseUrl = 'https://localhost:44393/';
+  //baseUrl = 'https://localhost:5001/';
 
   constructor(private afsAuth: AngularFireAuth, private httpClient: HttpClient) { }
 
@@ -42,7 +43,7 @@ export class UserService {
 
   getUsers(){
 
-      return this.httpClient.get('https://localhost:5001/api/Usuario');
+      return this.httpClient.get(this.baseUrl+'api/Usuario');
       
   }
 
