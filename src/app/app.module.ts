@@ -10,6 +10,10 @@ import { NosotrosComponent } from './authentication-pages/nosotros/nosotros.comp
 import { PrincipalComponent } from './no-authentication-pages/principal/principal.component';
 import { LoginComponent } from './no-authentication-pages/login/login.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { UsuariosControlComponent } from './authentication-pages/usuarios/usuarios-control/usuarios-control.component';
+import { UsuariosNuevoComponent } from './authentication-pages/usuarios/usuarios-nuevo/usuarios-nuevo.component';
+import { UsuariosEditarComponent } from './authentication-pages/usuarios/usuarios-editar/usuarios-editar.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -30,7 +34,10 @@ var firebaseConfig = {
     ReservacionesComponent,
     NosotrosComponent,
     PrincipalComponent,
-    LoginComponent
+    LoginComponent,
+    UsuariosControlComponent,
+    UsuariosNuevoComponent,
+    UsuariosEditarComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +45,8 @@ var firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule, // auth
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

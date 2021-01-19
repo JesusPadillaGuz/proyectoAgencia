@@ -1,0 +1,11 @@
+form{
+    width: 100%;
+}
+
+#descripcion{
+    border-radius: 5px;
+    border-style: solid;
+    padding: 10px;
+    border-width: 1px;
+    border-color:gainsboro;
+}

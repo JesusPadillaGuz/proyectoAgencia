@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="row">
+    <form class="form-group" [formGroup]="clienteNuevo" ngNativeValidate (ngSubmit)="onSubmit(clienteNuevo.value)">
+      <h4>Información general</h4>
+      <div class="form-group row">
+        <label for="nombre" class="col-sm-2 col-form-label">Nombre</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" formControlName="nombre" placeholder="Nombre" required>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="apellido" class="col-sm-2 col-form-label">Apellido</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" formControlName="apellido" placeholder="Apellido" required>
+        </div>
+      </div>
+      <h4>Información de tipo de usuario</h4>
+      <div class="form-group row">
+        <label for="tipo" class="col-sm-2 col-form-label">Tipo de usuario</label>
+        <div class="col-sm-10">
+          <select class="custom-select form-control" formControlName="tipo" required>
+            <option selected>Tipo...</option>
+            <option value="1">Empleado</option>
+            <option value="2">Empleado2</option>
+            <option value="3">Empleado3</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="descripcion" class="col-sm-2 col-form-label">Descripción</label>
+        <div class="col-sm-10">
+          <p> 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et esse vero atque nemo repellendus sequi ab optio minima tempora. Asperiores id ipsa quaerat quae qui accusamus eius delectus enim molestiae! 
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam minus animi iure doloremque eum esse at, voluptatum quaerat harum, rem, accusamus quisquam consequatur ad repellat beatae dicta quas nesciunt. Accusantium?
+          </p>
+        </div>
+      </div>
+      <h4>Información de acceso</h4>
+      <div class="form-group row">
+        <label for="correo" class="col-sm-2 col-form-label">Correo</label>
+        <div class="col-sm-10">
+          <input type="email" class="form-control" formControlName="correo" placeholder="Correo" required>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="pass" class="col-sm-2 col-form-label">Contraseña</label>
+        <div class="col-sm-10">
+          <input type="password" class="form-control" formControlName="pass" placeholder="Contraseña" required>
+        </div>
+      </div>
+
+      <div class="text-center mx-auto">
+        <input type="submit" class="btn btn-dark" value="Aceptar">
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+
+
+

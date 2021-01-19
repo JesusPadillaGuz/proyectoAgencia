@@ -1,12 +1,15 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
+  baseUrl = 'https://localhost:5001/';
 
-  constructor(private afsAuth: AngularFireAuth) { }
+  constructor(private afsAuth: AngularFireAuth, private httpClient: HttpClient) { }
 
   registerUser(email: string, pass: string){
     return new Promise((resolve,reject)=> {
@@ -35,4 +38,13 @@ export class UserService {
     //return this.afsAuth.auth.signOut();
     return this.afsAuth.signOut();
   }
+
+
+  getUsers(){
+
+      return this.httpClient.get('https://localhost:5001/api/Usuario');
+      
+  }
+
+
 }
