@@ -8,8 +8,8 @@ import { UsuarioModel } from '../models/Usuario.model';
   providedIn: 'root'
 })
 export class UserService {
- // baseUrl = 'https://localhost:44393/';
-  baseUrl = 'https://localhost:5001/';
+ baseUrl = 'https://localhost:44393/';
+  //baseUrl = 'https://localhost:5001/';
 
   constructor(private afsAuth: AngularFireAuth, private httpClient: HttpClient) { }
 

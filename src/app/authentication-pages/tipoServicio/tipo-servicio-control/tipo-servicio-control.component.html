@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="header">
+        <h2>Tipos de Servicio</h2>
+    </div>
+    <div class="align">
+    <button class="btn" [routerLink]="['/tipoServicioNuevo']"><i class="fas fa-plus-circle fa-2x"></i></button>
+  </div>
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let tipoServicio of this.listaTipoServicio">
+                    <td>{{tipoServicio.nombre}}</td>
+                    <td>{{tipoServicio.descripcion}}</td>
+                    <td>
+                        <Button class="btn" [routerLink]="['/tipoServicioEditar',tipoServicio.id]"><i class="fas fa-pencil-alt"></i></Button>
+                        <Button   class="btn" (click)="auxTipoServicio(tipoServicio)" data-toggle="modal" data-target="#ModalTipoServicio"><i class="far fa-trash-alt"></i></Button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
+
+
+    <!-- The Modal -->
+    <div class="modal fade" id="ModalTipoServicio"  #content>
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Eliminar Tipo de Servicio</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Estas tratando de eliminar el Tipo de Servicio "{{this.tipoServicioModal['nombre']}}"?</p>
+          </div>
+          <div class="modal-footer">
+              
+            <button type="button" class="btn btn-danger" (click)="onDelete()" data-dismiss="modal">Confirmar</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          </div>
+        </div>
+    </div>
+    

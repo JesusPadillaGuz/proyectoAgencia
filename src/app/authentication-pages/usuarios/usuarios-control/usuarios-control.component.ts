@@ -9,8 +9,9 @@ import { UserService } from 'src/app/services/user.service';
 export class UsuariosControlComponent implements OnInit {
   usuario={};
   lista;
-   constructor(private bd: UserService) { 
-    this.bd.getUsers().subscribe(resp => {
+
+   constructor(private userService: UserService) { 
+    this.userService.getUsers().subscribe(resp => {
       this.lista = resp;
       console.log(this.lista);
     });
@@ -30,7 +31,7 @@ export class UsuariosControlComponent implements OnInit {
         this.lista.splice(Number(index),1);
       }
     }
-    this.bd.deleteUser(this.usuario['id']).subscribe((resp)=>{
+    this.userService.deleteUser(this.usuario['id']).subscribe((resp)=>{
       console.log(resp);
     })
     

@@ -7,6 +7,8 @@ import { LoginComponent } from './no-authentication-pages/login/login.component'
 import { UsuariosControlComponent } from './authentication-pages/usuarios/usuarios-control/usuarios-control.component';
 import { UsuariosEditarComponent } from './authentication-pages/usuarios/usuarios-editar/usuarios-editar.component';
 import { UsuariosNuevoComponent } from './authentication-pages/usuarios/usuarios-nuevo/usuarios-nuevo.component';
+import { TipoServicioControlComponent } from './authentication-pages/tipoServicio/tipo-servicio-control/tipo-servicio-control.component';
+import { TipoServicioNuevoComponent } from './authentication-pages/tipoServicio/tipo-servicio-nuevo/tipo-servicio-nuevo.component';
 
 const routes: Routes = [
   { path: 'principal' , component:  PrincipalComponent},
@@ -15,7 +17,10 @@ const routes: Routes = [
   { path: 'login' , component: LoginComponent},
   { path: 'usuariosControl' , component: UsuariosControlComponent},
   { path: 'usuariosEditar/:id' , component: UsuariosEditarComponent},
-  { path: 'usuariosNuevo' , component: UsuariosNuevoComponent},
+  { path: 'usuariosNuevo' , component: UsuariosNuevoComponent}, 
+  { path: 'tipoServicioControl' , component: TipoServicioControlComponent},
+  /*{ path: 'tipoServicioEditar/:id' , component: UsuariosEditarComponent},*/
+  { path: 'tipoServicioNuevo' , component: TipoServicioNuevoComponent},
   { path: '**', redirectTo: 'principal' },
   { path: ' ', pathMatch: 'full', redirectTo: 'principal' }
 ];

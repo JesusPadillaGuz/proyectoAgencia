@@ -14,6 +14,8 @@ import { UsuariosControlComponent } from './authentication-pages/usuarios/usuari
 import { UsuariosNuevoComponent } from './authentication-pages/usuarios/usuarios-nuevo/usuarios-nuevo.component';
 import { UsuariosEditarComponent } from './authentication-pages/usuarios/usuarios-editar/usuarios-editar.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TipoServicioControlComponent } from './authentication-pages/tipoServicio/tipo-servicio-control/tipo-servicio-control.component';
+import { TipoServicioNuevoComponent } from './authentication-pages/tipoServicio/tipo-servicio-nuevo/tipo-servicio-nuevo.component';
 
 
 
@@ -37,7 +39,9 @@ var firebaseConfig = {
     LoginComponent,
     UsuariosControlComponent,
     UsuariosNuevoComponent,
-    UsuariosEditarComponent
+    UsuariosEditarComponent,
+    TipoServicioControlComponent,
+    TipoServicioNuevoComponent
   ],
   imports: [
     BrowserModule,
