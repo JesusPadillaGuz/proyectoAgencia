@@ -7,22 +7,6 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./usuarios-control.component.css']
 })
 export class UsuariosControlComponent implements OnInit {
-  m1={
-    'ID': 1,
-    'nombre': 'Andrea1',
-    'apellido': 'Delgado1',
-    'enabled':true,
-    'tipoId': 1,
-    'accesoId': 1
-  }
-  m2={
-    'ID': 2,
-    'nombre': 'Andrea2',
-    'apellido': 'Delgado2',
-    'enabled':true,
-    'tipoId': 2,
-    'accesoId': 2
-  }
   usuario={};
   lista;
    constructor(private bd: UserService) { 
@@ -46,7 +30,10 @@ export class UsuariosControlComponent implements OnInit {
         this.lista.splice(Number(index),1);
       }
     }
-    console.log(this.lista);
+    this.bd.deleteUser(this.usuario['id']).subscribe((resp)=>{
+      console.log(resp);
+    })
+    
   }
 
 

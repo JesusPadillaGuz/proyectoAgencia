@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { UsuarioModel } from '../models/Usuario.model';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  baseUrl = 'https://localhost:44393/';
-  //baseUrl = 'https://localhost:5001/';
+ // baseUrl = 'https://localhost:44393/';
+  baseUrl = 'https://localhost:5001/';
 
   constructor(private afsAuth: AngularFireAuth, private httpClient: HttpClient) { }
 
@@ -42,9 +43,16 @@ export class UserService {
 
 
   getUsers(){
-
       return this.httpClient.get(this.baseUrl+'api/Usuario');
-      
+  }
+  getUser(id){
+    return this.httpClient.get(this.baseUrl+'api/Usuario/'+id);
+  }
+  deleteUser(id){
+    return this.httpClient.delete(this.baseUrl+'api/Usuario/'+id);
+  }
+  newUser(user: UsuarioModel){
+    return this.httpClient.post(this.baseUrl+'api/Usuario',user);
   }
 
 

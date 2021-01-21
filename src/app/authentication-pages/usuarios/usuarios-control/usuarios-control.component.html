@@ -21,7 +21,7 @@
                     <td>{{usuario.tipoUsuario.nombre}}</td>
                     <td>{{usuario.acceso.email}}</td>
                     <td>
-                        <Button class="btn" [routerLink]="['/usuariosEditar',usuario.ID]"><i class="fas fa-pencil-alt"></i></Button>
+                        <Button class="btn" [routerLink]="['/usuariosEditar',usuario.id]"><i class="fas fa-pencil-alt"></i></Button>
                         <Button   class="btn" (click)="auxUsuario(usuario)" data-toggle="modal" data-target="#ModalUsuario"><i class="far fa-trash-alt"></i></Button>
                     </td>
                   </tr>

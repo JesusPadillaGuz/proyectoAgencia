@@ -18,7 +18,7 @@
       <div class="form-group row">
         <label for="tipo" class="col-sm-2 col-form-label">Tipo de usuario</label>
         <div class="col-sm-10">
-          <select class="custom-select form-control" formControlName="tipo" required>
+          <select name="seleccion" class="custom-select form-control"  [formControl]="selected" required>
             <option selected>Tipo...</option>
             <option value="1">Empleado</option>
             <option value="2">Empleado2</option>
@@ -30,8 +30,7 @@
         <label for="descripcion" class="col-sm-2 col-form-label">Descripción</label>
         <div class="col-sm-10">
           <p> 
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et esse vero atque nemo repellendus sequi ab optio minima tempora. Asperiores id ipsa quaerat quae qui accusamus eius delectus enim molestiae! 
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam minus animi iure doloremque eum esse at, voluptatum quaerat harum, rem, accusamus quisquam consequatur ad repellat beatae dicta quas nesciunt. Accusantium?
+            {{this.descripcion}}
           </p>
         </div>
       </div>
