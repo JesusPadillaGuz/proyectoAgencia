@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { AccesoModel } from 'src/app/models/Acceso.model';
+import { TipoUsuarioModel } from 'src/app/models/TipoUsuario.model';
 import { UsuarioModel } from 'src/app/models/Usuario.model';
 import { UserService } from 'src/app/services/user.service';
 
@@ -10,6 +12,8 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class UsuariosNuevoComponent implements OnInit {
   user=new UsuarioModel;
+  acceso= new AccesoModel;
+  tipoUsuario=new TipoUsuarioModel;
   clienteNuevo:FormGroup;
 
   selected: FormControl = new FormControl(null);
@@ -35,10 +39,21 @@ export class UsuariosNuevoComponent implements OnInit {
   }
 
   onSubmit(info){
+    this.tipoUsuario._Descripcion="Prueba";
+    this.tipoUsuario._IsEnabled=true;
+    this.tipoUsuario._Nombre="Admin";
+
+    this.acceso._Email=info['correo'];
     info['tipo']=this.opc;
     this.user._Nombre=info['nombre'];
-    console.log(info)
-    this.bd.newUser(info).subscribe((resp)=>{
+    this.user._Apellido=info['apellido'];
+    this.user._IsEnabled=true;
+   // this.user._TipoUsuario=this.tipoUsuario;
+    //this.user._Acceso=this.acceso;
+    this.user._AccesoID=1;
+    this.user._TipoUsuarioID=1;
+    console.log(this.user)
+    this.bd.newUser(this.user).subscribe((resp)=>{
       console.log(resp);
     })
   }

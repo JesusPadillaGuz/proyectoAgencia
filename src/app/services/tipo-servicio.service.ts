@@ -6,8 +6,8 @@ import { TipoServicioModel } from '../models/TipoServicio.model';
   providedIn: 'root'
 })
 export class TipoServicioService {
-  baseUrl = 'https://localhost:44393/';
-  //baseUrl = 'https://localhost:5001/';
+  //baseUrl = 'https://localhost:44393/';
+  baseUrl = 'https://localhost:5001/';
 
   constructor( private httpClient: HttpClient) { }
 
