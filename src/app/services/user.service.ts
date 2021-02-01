@@ -8,8 +8,8 @@ import { UsuarioModel } from '../models/Usuario.model';
   providedIn: 'root'
 })
 export class UserService {
- //baseUrl = 'https://localhost:44393/';
-  baseUrl = 'https://localhost:5001/';
+ baseUrl = 'https://localhost:44393/';
+ // baseUrl = 'https://localhost:5001/';
 
   constructor(private afsAuth: AngularFireAuth, private httpClient: HttpClient) { }
 
@@ -52,6 +52,7 @@ export class UserService {
     return this.httpClient.delete(this.baseUrl+'api/Usuario/'+id);
   }
   newUser(user){
+   // console.log("este es el usuario desde el service",user);
     return this.httpClient.post(this.baseUrl+'api/Usuario',user);
   }
 

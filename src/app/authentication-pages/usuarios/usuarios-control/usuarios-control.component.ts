@@ -8,12 +8,12 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class UsuariosControlComponent implements OnInit {
   usuario={};
-  lista;
+  listaUsuarios;
 
    constructor(private userService: UserService) { 
     this.userService.getUsers().subscribe(resp => {
-      this.lista = resp;
-      console.log(this.lista);
+      this.listaUsuarios = resp;
+      console.log(this.listaUsuarios);
     });
   }
 
@@ -26,9 +26,9 @@ export class UsuariosControlComponent implements OnInit {
   }
  
   onDelete(){
-    for (let index in this.lista) {
-      if (this.lista[index].ID==this.usuario['ID']) {
-        this.lista.splice(Number(index),1);
+    for (let index in this.listaUsuarios) {
+      if (this.listaUsuarios[index].ID==this.usuario['ID']) {
+        this.listaUsuarios.splice(Number(index),1);
       }
     }
     this.userService.deleteUser(this.usuario['id']).subscribe((resp)=>{

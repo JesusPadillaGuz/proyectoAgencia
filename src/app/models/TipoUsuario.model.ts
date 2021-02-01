@@ -1,6 +1,6 @@
 export class TipoUsuarioModel{
-    _ID: number;
-    _Nombre: string;
-    _Descripcion: string;
-    _IsEnabled:boolean;
+    ID: number;
+    Nombre: string;
+    Descripcion: string;
+    IsEnabled:boolean;
 }

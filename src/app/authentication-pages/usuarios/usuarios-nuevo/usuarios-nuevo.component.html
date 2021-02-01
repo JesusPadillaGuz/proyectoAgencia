@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <form class="form-group" [formGroup]="clienteNuevo" ngNativeValidate (ngSubmit)="onSubmit(clienteNuevo.value)">
+    <form class="form-group" [formGroup]="usuarioNuevo" ngNativeValidate (ngSubmit)="onSubmit(usuarioNuevo.value)">
       <h4>Información general</h4>
       <div class="form-group row">
         <label for="nombre" class="col-sm-2 col-form-label">Nombre</label>
@@ -18,11 +18,11 @@
       <div class="form-group row">
         <label for="tipo" class="col-sm-2 col-form-label">Tipo de usuario</label>
         <div class="col-sm-10">
-          <select name="seleccion" class="custom-select form-control"  [formControl]="selected" required>
-            <option selected>Tipo...</option>
-            <option value="1">Empleado</option>
-            <option value="2">Empleado2</option>
-            <option value="3">Empleado3</option>
+          <select name="seleccion" class="custom-select form-control" formControlName="tipoUsuario"  required>
+            <ng-container *ngIf="this.ListaTiposUsuario!=null">
+              <option [value]="tipoUsuario.id" *ngFor="let tipoUsuario of this.ListaTiposUsuario">{{tipoUsuario.nombre}}</option>
+            </ng-container>
+            
           </select>
         </div>
       </div>

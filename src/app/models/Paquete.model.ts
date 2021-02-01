@@ -1,14 +1,14 @@
 import { ServicioModel } from './Servicio.model';
 export class PaqueteModel{
-    _ID: number;
-    _Nombre: string;
-    _IsEnabled: boolean;
-    _Descripcion: string;
-    _ServicioID: number;
-    _Servicio: ServicioModel;
-    _ImagenesURL: string;
-    _Precio_Ad: number;
-    _Precio_Jr: number;
-    _Precio_Mr: number;
-    _Notas: string;
+    ID: number;
+    Nombre: string;
+    IsEnabled: boolean;
+    Descripcion: string;
+    ServicioID: number;
+    Servicio: ServicioModel;
+    ImagenesURL: string;
+    Precio_Ad: number;
+    Precio_Jr: number;
+    Precio_Mr: number;
+    Notas: string;
 }

@@ -1,4 +1,4 @@
 export class TipoPersonaModel{
-    _ID: number;
-    _Nombre: string;
+    ID: number;
+    Nombre: string;
 }
